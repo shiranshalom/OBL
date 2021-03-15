@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" style="-fx-background-color: #203447;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoginController">
+   <top>
+      <AnchorPane fx:id="rootAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="765.0" style="-fx-background-color: #203447;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXTextField fx:id="userNameTextField" focusColor="#a0a2ab" labelFloat="true" layoutX="287.0" layoutY="195.0" prefHeight="23.0" prefWidth="189.0" promptText=" Username" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#a0a2ab">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="passwordTextFIeld" focusColor="#a0a2ab" labelFloat="true" layoutX="288.0" layoutY="249.0" prefHeight="28.0" prefWidth="189.0" promptText="Password" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#a0a2ab">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="loginBtn" defaultButton="true" layoutX="337.0" layoutY="338.0" onAction="#loginBtnClick" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: #3C58FA;" text="Login" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="resources" layoutX="352.0" layoutY="129.0" text="Login" textFill="#a0a2ab">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="308.0" layoutY="484.0" onMouseClicked="#openSearchScreen" prefHeight="18.0" prefWidth="149.0" text="Search a book as guest" textFill="#a0a2ab" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fx:id="SearchImage" fitHeight="30.0" fitWidth="33.0" layoutX="271.0" layoutY="479.0" onMouseClicked="#openSearchScreen" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../resources/search.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="260.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/Login_Username.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="260.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/Login_Password.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="76.0" fitWidth="101.0" layoutX="338.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/Logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="359.0" layoutY="94.0" text="OBL" textFill="#a0a2ab">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="warningLabel" layoutX="286.0" layoutY="297.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

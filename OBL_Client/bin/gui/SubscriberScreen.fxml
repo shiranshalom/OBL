@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="664.0" prefWidth="1010.0" style="-fx-background-color: #203447;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SubscriberScreenController">
+   <center>
+      <AnchorPane fx:id="AnchorePane" style="-fx-background-color: #203447;">
+         <children>
+            <AnchorPane fx:id="pane_viewSubscriberCard" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <AnchorPane fx:id="pane_searchBook" layoutX="9.0" prefHeight="664.0" prefWidth="877.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="0.0" />
+            <AnchorPane fx:id="pane_books" layoutY="61.0" prefHeight="552.0" prefWidth="882.0" visible="false" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="61.0" />
+            <Pane fx:id="pane_home" layoutX="3.0" layoutY="1.0" prefHeight="664.0" prefWidth="881.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="370.0" layoutY="80.0" text="Home" textFill="#a0a2ab">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userWelcomLabel" layoutX="53.0" layoutY="159.0" text="Hello Yossi!" textFill="#a0a2ab">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <TitledPane animated="false" layoutX="53.0" layoutY="237.0" prefHeight="217.0" prefWidth="775.0" stylesheets="@../resources/titledpane.css" text="Messages" textFill="#a0a2ab">
+                     <content>
+                        <TableView fx:id="messagesTableView" prefHeight="96.0" prefWidth="588.0">
+                           <columns>
+                              <TableColumn fx:id="dateSentTableColumn" prefWidth="86.0" sortType="DESCENDING" text="Date Sent" />
+                              <TableColumn fx:id="msgContentTableColumn" prefWidth="668.0" text="Message content" />
+                           </columns>
+                        </TableView>
+                     </content>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TitledPane>
+               </children>
+            </Pane>
+            <Label fx:id="userNameLabel" layoutX="34.0" layoutY="11.0" text="username" textFill="#a0a2ab">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="13.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/Login_Username.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="LogOut" onMouseClicked="#logOutDisplay" prefHeight="18.0" prefWidth="48.0" text="LogOut" textFill="#a0a2ab" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="16.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fx:id="logoutimage" fitHeight="20.0" fitWidth="23.0" onMouseClicked="#logOutDisplay" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="76.0" AnchorPane.topAnchor="15.0">
+               <image>
+                  <Image url="@../resources/LogOut.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="11.0" layoutY="29.0" text="Logged as Subscriber" textFill="#a0a2ab">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="statusLabel" layoutX="316.0" layoutY="638.0" prefHeight="20.0" prefWidth="345.0" text="Subscriber card status: " textFill="#a0a2ab" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="316.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="611.0" prefWidth="116.0" style="-fx-background-color: #a0a2ab;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="36.0" layoutY="83.0" text="OBL" textFill="#203447">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="btn_home" fitHeight="124.0" fitWidth="116.0" layoutY="120.0" onMouseClicked="#btn_homeDisplay" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/HomePage.JPG" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="btn_books" fitHeight="124.0" fitWidth="116.0" layoutY="230.0" onMouseClicked="#btn_booksDisplay" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/My%20books.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="btn_viewSubscriberCard" fitHeight="124.0" fitWidth="116.0" layoutY="340.0" onMouseClicked="#btn_viewSubscriberCardDisplay" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/ViewSubscriberCard.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="btn_searchBook" fitHeight="124.0" fitWidth="116.0" layoutY="450.0" onMouseClicked="#btn_searchBookDisplay" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/SearchBook.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="78.0" fitWidth="116.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow height="0.0" radius="0.0" width="0.0" />
+         </effect>
+      </AnchorPane>
+   </left>
+</BorderPane>

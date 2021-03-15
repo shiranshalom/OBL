@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="664.0" prefWidth="947.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LibrarianScreenController">
+   <center>
+      <AnchorPane fx:id="AnchorePane" prefWidth="829.0" style="-fx-background-color: #203447;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="pane_searchBook" layoutX="2.0" layoutY="2.0" prefHeight="381.0" prefWidth="481.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Pane fx:id="pane_createNewSubscriberCard" layoutX="89.0" layoutY="27.0" prefHeight="611.0" prefWidth="650.0" visible="false">
+               <children>
+                  <Label layoutX="175.0" layoutY="58.0" text="Create new subsciber card" textFill="#a0a2ab">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <GridPane fx:id="Grid" layoutX="188.0" layoutY="138.0" prefHeight="274.0" prefWidth="251.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.5999755859375" minWidth="10.0" prefWidth="31.79998779296875" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.79998779296875" minWidth="10.0" prefWidth="107.60003662109375" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.199951171875" minWidth="10.0" prefWidth="117.39996337890625" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="40.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="38.20000610351562" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="42.99999389648437" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="37.0" prefWidth="106.0" text="User name:" textFill="#a0a2ab" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="39.0" prefWidth="106.0" text="Password:" textFill="#a0a2ab" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="40.0" prefWidth="106.0" text="Last name:" textFill="#a0a2ab" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="39.0" prefWidth="106.0" text="Phone number:" textFill="#a0a2ab" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="47.0" prefWidth="106.0" text="E-mail:" textFill="#a0a2ab" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="userNameTextfield" focusColor="#a0a2ab" prefHeight="30.0" prefWidth="130.0" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#a0a2ab" GridPane.columnIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="idNumberTextfield" focusColor="#a0a2ab" prefHeight="23.0" prefWidth="189.0" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#a0a2ab" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="firstNameTextfield" focusColor="#a0a2ab" prefHeight="23.0" prefWidth="189.0" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#a0a2ab" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="lastNameTextfield" focusColor="#a0a2ab" prefHeight="23.0" prefWidth="189.0" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#a0a2ab" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </JFXTextField>
+                        <JFXTextField fx:id="phoneNumberTextfield" focusColor="#a0a2ab" prefHeight="23.0" prefWidth="189.0" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#a0a2ab" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="emailTextfield" focusColor="#a0a2ab" prefHeight="23.0" prefWidth="189.0" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#a0a2ab" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="43.0" prefWidth="106.0" text="ID number:" textFill="#a0a2ab" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXPasswordField fx:id="passwordTextfield" focusColor="#a0a2ab" labelFloat="true" prefHeight="28.0" prefWidth="189.0" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#a0a2ab" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="39.0" prefWidth="106.0" text="First name:" textFill="#a0a2ab" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_RIGHT" prefHeight="36.0" prefWidth="26.0" text="*" textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_RIGHT" prefHeight="38.0" prefWidth="26.0" text="*" textFill="RED" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_RIGHT" prefHeight="36.0" prefWidth="26.0" text="*" textFill="RED" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_RIGHT" prefHeight="36.0" prefWidth="26.0" text="*" textFill="RED" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_RIGHT" prefHeight="36.0" prefWidth="26.0" text="*" textFill="RED" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <JFXButton fx:id="createSubscriberBtn" layoutX="249.0" layoutY="477.0" onAction="#btn_createSubscriberCardDisplay" prefHeight="58.0" prefWidth="152.0" style="-fx-background-color: #3C58FA;" text="Create subscriber card" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label layoutX="218.0" layoutY="428.0" style="-fx-font-weight: BOLD;" text="* Required fields" textFill="#ff0f0f" />
+                  <Label fx:id="warningLabel" layoutX="222.0" layoutY="448.0" textFill="#ff0f0f">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pane_searchSubscriberCard" layoutX="81.0" layoutY="34.0" prefHeight="611.0" visible="false" AnchorPane.leftAnchor="81.0" AnchorPane.rightAnchor="98.0" AnchorPane.topAnchor="34.0">
+               <children>
+                  <Label layoutX="179.0" layoutY="205.0" prefHeight="20.0" prefWidth="130.0" text="Enter subscriber ID:" textFill="#a0a2ab">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btn_viewSubscriberCard" alignment="CENTER" buttonType="RAISED" layoutX="252.0" layoutY="291.0" onAction="#btn_viewSubscriberCardClick" prefHeight="42.0" prefWidth="155.0" ripplerFill="#bcbfcf" style="-fx-background-color: #3C58FA;" text="View subscriber card" textFill="#f9fafc">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label layoutX="206.0" layoutY="57.0" text="Search subscriber card" textFill="#a0a2ab">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txt_subscriberID" focusColor="#a0a2ab" layoutX="309.0" layoutY="190.0" prefHeight="30.0" prefWidth="149.0" style="-fx-text-inner-color: #a0a2ab;" unFocusColor="#a0a2ab">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </JFXTextField>
+               </children>
+            </Pane>
+            <AnchorPane fx:id="pane_home" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="userWelcomLabel" layoutX="56.0" layoutY="101.0" text="Hello Galina!" textFill="#a0a2ab">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <JFXButton buttonType="RAISED" layoutX="647.0" layoutY="177.0" onAction="#btn_borrowClick" prefHeight="42.0" prefWidth="150.0" style="-fx-background-color: #3C58FA;" text="Borrow" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="647.0" layoutY="227.0" onAction="#borrowExtensionClick" prefHeight="42.0" prefWidth="150.0" style="-fx-background-color: #3C58FA;" text="Borrow extension" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="647.0" layoutY="277.0" onAction="#btn_ReturnClick" prefHeight="42.0" prefWidth="150.0" style="-fx-background-color: #3C58FA;" text="Return" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <Label layoutX="338.0" layoutY="66.0" text="Home" textFill="#a0a2ab">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane fx:id="borrowsPane" layoutY="326.0" prefHeight="338.0" prefWidth="829.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="326.0" />
+                  <Accordion layoutX="173.0" layoutY="292.0" />
+                <TitledPane animated="false" layoutX="21.0" layoutY="155.0" prefHeight="164.0" prefWidth="616.0" stylesheets="@../resources/titledpane.css" text="Messages" textFill="#a0a2ab">
+                     <content>
+                        <TableView fx:id="messagesTableView" prefHeight="96.0" prefWidth="588.0">
+                          <columns>
+                            <TableColumn fx:id="dateSentTableColumn" prefWidth="86.0" sortType="DESCENDING" text="Date Sent" />
+                            <TableColumn fx:id="msgContentTableColumn" prefWidth="507.0" text="Message content" />
+                          </columns>
+                        </TableView>
+                     </content>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TitledPane>
+               </children>
+            </AnchorPane>
+            <Label fx:id="userNameLabel" layoutX="38.0" layoutY="14.0" text="username" textFill="#a0a2ab">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="32.0" text="Logged as Librarian" textFill="#a0a2ab">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/Login_Username.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="LogOut" layoutX="812.0" layoutY="13.0" onMouseClicked="#logOutDisplay" prefHeight="18.0" prefWidth="48.0" text="LogOut" textFill="#a0a2ab" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="13.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <ImageView fx:id="logoutimage" fitHeight="20.0" fitWidth="23.0" layoutX="790.0" layoutY="13.0" onMouseClicked="#logOutDisplay" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="62.0" AnchorPane.topAnchor="13.0">
+               <image>
+                  <Image url="@../resources/LogOut.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="611.0" prefWidth="116.0" style="-fx-background-color: #a0a2ab;" BorderPane.alignment="CENTER">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label layoutX="36.0" layoutY="83.0" text="OBL" textFill="#203447">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="btn_home" fitHeight="124.0" fitWidth="116.0" layoutX="2.0" layoutY="120.0" onMouseClicked="#btn_homeDisplay" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/HomePage.JPG" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="btn_createNewSubscriberCard" fitHeight="124.0" fitWidth="116.0" layoutX="2.0" layoutY="340.0" onMouseClicked="#btn_createNewSubscriberCardDisplay" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/CreateNewSubscriberCard.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="btn_books" fitHeight="124.0" fitWidth="116.0" layoutX="2.0" layoutY="230.0" onMouseClicked="#btn_booksDisplay" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/Books.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="btn_searchSubscriberCard" fitHeight="124.0" fitWidth="116.0" layoutX="2.0" layoutY="450.0" onMouseClicked="#btn_searchSubscriberCardDisplay" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/SearchSubscriberCard.jpg" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="78.0" fitWidth="116.0" layoutX="14.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/Logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

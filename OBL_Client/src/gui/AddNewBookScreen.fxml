@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="621.0" prefWidth="761.0" style="-fx-background-color: #203447;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AddNewBookController">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="761.0" style="-fx-background-color: #203447;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="76.0" fitWidth="101.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/Logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="60.0" layoutY="199.0" text="Authors:" textFill="#a0a2ab" underline="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="265.0" text="Categories:" textFill="#a0a2ab" underline="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="90.0" text="OBL" textFill="#a0a2ab">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="296.0" layoutY="19.0" text="Add New Book" textFill="#a0a2ab">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="141.0" text="Name:" textFill="#a0a2ab" underline="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Accordion layoutX="451.0" layoutY="65.0" />
+            <Label layoutX="60.0" layoutY="327.0" prefHeight="35.0" prefWidth="181.0" text="Publication Year:" textFill="#a0a2ab" underline="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="394.0" prefHeight="35.0" prefWidth="184.0" text="Edition Number:" textFill="#a0a2ab" underline="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="455.0" prefHeight="35.0" prefWidth="109.0" text="Location:" textFill="#a0a2ab" underline="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_RIGHT" layoutX="29.0" layoutY="129.0" prefHeight="36.0" prefWidth="26.0" text="*" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_RIGHT" layoutX="29.0" layoutY="255.0" prefHeight="36.0" prefWidth="26.0" text="*" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_RIGHT" layoutX="419.0" layoutY="292.0" prefHeight="36.0" prefWidth="26.0" text="*" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="450.0" layoutY="302.0" text="Number of copies:" textFill="#a0a2ab" underline="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_RIGHT" layoutX="29.0" layoutY="189.0" prefHeight="36.0" prefWidth="26.0" text="*" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_RIGHT" layoutX="29.0" layoutY="319.0" prefHeight="36.0" prefWidth="26.0" text="*" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_RIGHT" layoutX="29.0" layoutY="388.0" prefHeight="36.0" prefWidth="26.0" text="*" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="BOTTOM_RIGHT" layoutX="29.0" layoutY="450.0" prefHeight="36.0" prefWidth="26.0" text="*" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="bookNameTextArea" layoutX="134.0" layoutY="147.0" prefHeight="25.0" prefWidth="257.0" promptText="Can not be an existing book" style="-fx-text-inner-color: #a0a2ab;">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="authorTextArea" labelFloat="true" layoutX="151.0" layoutY="203.0" prefHeight="25.0" prefWidth="241.0" promptText="Author1, author2, etc..." style="-fx-text-inner-color: #a0a2ab;" viewOrder="1.0">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="categoriesTextArea" labelFloat="true" layoutX="190.0" layoutY="270.0" prefHeight="25.0" prefWidth="202.0" promptText="Category1, category2, etc..." style="-fx-text-inner-color: #a0a2ab;" viewOrder="2.0">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="publicationYearTextField" layoutX="244.0" layoutY="327.0" prefHeight="39.0" prefWidth="149.0" promptText="A valid year" style="-fx-text-inner-color: #a0a2ab;" viewOrder="3.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="editionNumTextField" layoutX="237.0" layoutY="395.0" prefHeight="39.0" prefWidth="156.0" style="-fx-text-inner-color: #a0a2ab;" viewOrder="4.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="locationTextField" layoutX="163.0" layoutY="457.0" prefHeight="39.0" prefWidth="231.0" style="-fx-text-inner-color: #a0a2ab;" viewOrder="5.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <TextArea fx:id="descreptionPane" focusTraversable="false" layoutX="451.0" layoutY="110.0" prefHeight="158.0" prefWidth="250.0" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Spinner fx:id="copiesSpinner" editable="true" layoutX="658.0" layoutY="306.0" prefHeight="14.0" prefWidth="76.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Spinner>
+            <JFXCheckBox fx:id="wantedBook" layoutX="447.0" layoutY="366.0" text="Is this book wanted?" textFill="#a0a2ab" unCheckedColor="#a0a2ab">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXCheckBox>
+            <JFXButton fx:id="btnTOC" alignment="CENTER" layoutX="513.0" layoutY="442.0" onAction="#btnTableOfcontentClick" prefHeight="30.0" prefWidth="154.0" style="-fx-background-color: #3C58FA;" text="Upload table of content" textFill="WHITE" wrapText="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnAddBook" layoutX="343.0" layoutY="551.0" onAction="#btnAddBookClick" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: #3C58FA;" text="Add Book" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="450.0" layoutY="65.0" text="Description:" textFill="#a0a2ab" underline="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="warningLabel" layoutX="65.0" layoutY="553.0" textFill="RED">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="58.0" layoutY="521.0" style="-fx-font-weight: BOLD;" text="* Required fields" textFill="#ff0f0f" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
